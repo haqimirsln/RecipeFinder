@@ -101,6 +101,19 @@ h1 {
 #clear-search:hover {
     background-color: #e64a19;
 }
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for the footer */
+    color: #fff;                          /* White text color */
+    text-align: center;                    /* Center the text */
+    padding: 5px;                         /* Add some padding */
+    position: fixed;                       /* Fix the footer at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%;                           /* Ensure it spans the full width */
+    font-size: 11px;                       /* Slightly smaller font size */
+}
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
