@@ -1,0 +1,129 @@
+/* Global styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('masak.jpg');  /* Set the background image */
+    background-size: cover;              /* Make sure it covers the entire screen */
+    background-position: center;         /* Center the background */
+    background-attachment: fixed;        /* Make the background fixed while scrolling */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main container */
+.app-container {
+    background-color: rgba(255, 255, 255, 0.1);  /* Slightly transparent white for the app container */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);    /* Shadow to make the search container pop */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    backdrop-filter: blur(8px);                    /* Optional: adds blur effect on the background */
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5em;
+    color: #fff;           /* White color for the heading */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Input styles for the search box */
+#search-input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #fff;  /* White border for a clean look */
+    background-color: transparent;  /* Transparent background for input */
+    color: #fff;                  /* White text inside the input */
+    font-size: 16px;
+    text-align: center;           /* Center text inside the input */
+    transition: all 0.3s ease;    /* Smooth transition */
+}
+
+/* Focus effect on input */
+#search-input:focus {
+    outline: none;
+    border-color: #ff5722;        /* Orange color when focused */
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.4);
+}
+
+/* Suggestions container */
+#suggestions {
+    max-height: 400px;  /* Limit the height of the suggestion box */
+    overflow-y: auto;   /* Scrollable if too many results */
+    background-color: rgba(255, 255, 255, 0.9);  /* White background for suggestions */
+    color: #333;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;      /* Hidden by default */
+    margin-top: 10px;
+    width: 100%;        /* Ensure the suggestions container matches the width of the input */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Styling individual suggestion items */
+#suggestions p {
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on suggestions */
+#suggestions p:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+/* Clear button */
+#clear-search {
+    margin-top: 15px;
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    display: none; /* Hidden by default */
+}
+
+#clear-search:hover {
+    background-color: #e64a19;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #search-input {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #search-input {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
