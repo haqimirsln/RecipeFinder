@@ -8,9 +8,10 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;             /* Align content to the top to avoid unnecessary space */
+    height: 100%;
     margin: 0;
+    overflow: auto;                      /* Enable scrolling if the content exceeds the viewport */
 }
 
 /* Main container */
@@ -23,6 +24,7 @@ body {
     max-width: 500px;
     text-align: center;
     backdrop-filter: blur(8px);                    /* Optional: adds blur effect on the background */
+    box-sizing: border-box;                       /* Ensure padding is included in the width calculation */
 }
 
 /* Heading */
