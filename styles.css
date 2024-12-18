@@ -13,6 +13,15 @@ body {
     margin: 0;
     overflow: auto;                      /* Enable scrolling if the content exceeds the viewport */
 }
+.gf-photo {
+    width: 150px;                  /* Adjust the size of the image */
+    height: 150px;                 /* Make the height equal to the width */
+    border-radius: 50%;            /* Make it circular */
+    object-fit: cover;             /* Ensure the image covers the circular area */
+    margin: 20px 0;                /* Add some space around the image */
+    border: 4px solid #fff;        /* Add a white border around the image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  /* Add shadow for a floating effect */
+}
 
 /* Main container */
 .app-container {
@@ -20,16 +29,25 @@ body {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);    /* Shadow to make the search container pop */
-    width: 100%;
+    width: auto;
     max-width: 500px;
     text-align: center;
     backdrop-filter: blur(8px);                    /* Optional: adds blur effect on the background */
-    box-sizing: border-box;                       /* Ensure padding is included in the width calculation */
+}
+.website-description {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;  /* Make the text stand out */
 }
 
 /* Heading */
 h1 {
-    font-size: 2.5em;
+    font-size: 2.0em;
     color: #fff;           /* White color for the heading */
     margin-bottom: 20px;
     font-weight: 700;
